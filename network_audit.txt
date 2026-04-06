@@ -1,0 +1,2 @@
+default via 192.168.1.1 dev wlx9cefd5f664e7 proto dhcp src 192.168.1.241 metric 600 
+192.168.1.0/24 dev wlx9cefd5f664e7 proto kernel scope link src 192.168.1.241 metric 600 
