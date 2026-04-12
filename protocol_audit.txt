@@ -1,0 +1,34 @@
+
+
+; <<>> DiG 9.20.21-1~deb13u1-Debian <<>> google.com
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 34206
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;google.com.			IN	A
+
+;; ANSWER SECTION:
+google.com.		209	IN	A	142.251.45.78
+
+;; Query time: 3 msec
+;; SERVER: 192.168.1.1#53(192.168.1.1) (UDP)
+;; WHEN: Sun Apr 12 13:51:29 EDT 2026
+;; MSG SIZE  rcvd: 55
+
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sun, 12 Apr 2026 17:53:10 GMT
+Content-Type: text/html
+Content-Length: 615
+Last-Modified: Mon, 06 Apr 2026 05:04:54 GMT
+Connection: keep-alive
+ETag: "69d33ef6-267"
+Accept-Ranges: bytes
+
+Netid State  Recv-Q Send-Q Local Address:Port Peer Address:Port
+tcp   LISTEN 0      511          0.0.0.0:8080      0.0.0.0:*   
+tcp   LISTEN 0      511             [::]:8080         [::]:*   
