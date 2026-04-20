@@ -1,0 +1,17 @@
+==================================================
+SESSION 10: SANDBOX DETONATION REPORT
+Operator: rasta
+==================================================
+
+QUESTION 1: Did the ping to google.com succeed or fail in Host-Only mode?
+ANSWER: [Type your answer here]
+
+
+It succeded 
+
+
+QUESTION 2: Why must a SOC analyst NEVER use "Bridged" mode when detonating unknown malware?
+ANSWER: [Type your answer here]
+
+
+The reason why it's not ideal to be on "Bridged" mode while detonating the unknown is because when detonating it could pose the possiblity of it being a form of malware where it could travel through the network as "Bridged" mode allows the VM to use the Hosts machine's internet resource with it's own IP address , which it would gain from the router that the Host machine uses 
