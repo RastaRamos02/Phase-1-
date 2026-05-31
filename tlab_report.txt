@@ -1,0 +1,38 @@
+========================================================================
+OPERATION BLACKOUT - REMEDIATION REPORT
+========================================================================
+Operator: rasta
+Session: 02-TLAB
+Date: May 31, 2026
+
+------------------------------------------------------------------------
+EVIDENCE 1: RESTORED GATEWAY ROUTE (Layer 3)
+------------------------------------------------------------------------
+$ ip route
+default via 192.168.10.1 dev enp1s0 linkdown
+default via 192.168.1.1 dev wlx9cefd5f664e7 proto dhcp src 192.168.1.241 metric 600
+172.17.0.0/16 dev docker0 proto kernel scope link src 172.17.0.1 linkdown
+172.19.0.0/16 dev br-4a92988493ec proto kernel scope link src 172.19.0.1 linkdown
+172.20.0.0/16 dev br-e391e0248839 proto kernel scope link src 172.20.0.1 linkdown
+192.168.1.0/24 dev wlx9cefd5f664e7 proto kernel scope link src 192.168.1.241 metric 600
+192.168.10.0/24 dev enp1s0 proto kernel scope link src 192.168.10.150
+192.168.122.0/24 dev virbr0 proto kernel scope link src 192.168.122.1 linkdown
+
+------------------------------------------------------------------------
+EVIDENCE 2: TCP 3-WAY HANDSHAKE PROOF (Layer 4)
+------------------------------------------------------------------------
+$ tcpdump -i any host 192.168.10.193
+
+
+
+
+
+
+1. SYN (Your computer requests a connection)
+17:05:18.901579 wlx9cefd5f664e7 Out IP parrot.48904 > ://awsglobalaccelerator.com.http: Flags [S], seq 3616662508, win 64240, options [mss 1460,sackOK,TS val 2402563429 ecr 0,nop,wscale 10], length 0
+
+2. SYN-ACK (The server accepts and requests a connection back)
+17:05:18.917609 wlx9cefd5f664e7 In  IP ://awsglobalaccelerator.com.http > parrot.48904: Flags [S.], seq 1164438168, ack 3616662509, win 62643, options [mss 1460,sackOK,TS val 1572513302 ecr 2402563429,nop,wscale 7], length 0
+
+3. ACK (Your computer acknowledges the server, establishing the connection)
+17:05:18.917652 wlx9cefd5f664e7 Out IP parrot.48904 > ://awsglobalaccelerator.com.http: Flags [.], ack 1, win 63, options [nop,nop,TS val 2402563445 ecr 1572513302], length 0
