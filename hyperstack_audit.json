@@ -1,0 +1,8 @@
+{
+  "operator": "JP",
+  "host_ip": "192.168.1.238",
+  "vm_sandbox_ip": "192.168.56.10",
+  "web_container_id": "bc1e80807402",
+  "isolation_test": "PASSED",
+  "persistence_verified": true
+}
