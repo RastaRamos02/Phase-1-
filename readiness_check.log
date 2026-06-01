@@ -1,0 +1,15 @@
+==================================================
+SESSION 16: READINESS INVENTORY
+==================================================
+Operator: [Steven Ramos]
+Date: [6/1/2026]
+
+Confidence Audit (Yes/No):
+1. Nmap (Network Scanning): [Yes]
+2. Docker (Containerization): [Yes]
+3. Linux Hardening (UFW/chmod): [Yes]
+4. VS Code Remote-SSH: [Yes]
+
+Identify your weakest area and your plan to review it:
+[I Dont think I personally need to work on anything specifically, but whenever I do have issues I always reach to other classmates (Fellows) for help. ]
+==================================================
