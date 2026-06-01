@@ -1,0 +1,28 @@
+==================================================
+SESSION 20: NETWORK ENUMERATION MAP
+Target Subnet: 172.99.0.0/24
+==================================================
+
+
+[TARGET 1] IP: 172.99.0.5
+- Scanning Command Used: sudo nmap -sV 172.99.0.5
+- Open Ports Found: 80/tcp
+- Running Service & Exact Version: http | nginx 1.31.1
+
+[TARGET 2] IP: 172.99.0.6
+- Scanning Command Used: sudo nmap -sV -p- 172.99.0.6
+- Open Ports Found: 6379/tcp
+- Running Service & Exact Version: redis | Redis key-value store 8.8.0
+
+[TARGET 3] IP: 172.99.0.7
+- Scanning Command Used: sudo nmap -A 172.99.0.7
+- Open Ports Found: 80/tcp
+- Running Service & Exact Version: http | Apache httpd 2.4.67 ((Unix))
+
+
+
+Question 1: What is the primary operational difference between running an Nmap scan with -sn versus running a scan with -sV?
+Answer: The -sn flag disables port scanning and performs a pure host discovery sweep (ping sweep) at Layer 3 to check if a machine is online. The -sV flag performs active application banner-grabbing at Layer 4 and 7 by probing open ports to determine the exact service name and software version running behind them.
+
+Question 2: Why is running a full port scan (-p-) considered critical during an active security assessment?
+Answer: By default, Nmap only scans the top 1,000 most frequently used ports. Attackers and administrators frequently host sensitive or unauthorized services on non-standard ports (above port 1000) to avoid detection, making a full 1–65535 (-p-) scan vital to uncovering hidden exposure vectors. 
